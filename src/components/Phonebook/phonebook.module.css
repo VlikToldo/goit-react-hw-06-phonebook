@@ -1,0 +1,12 @@
+.contactBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listBox{
+    border: solid 1px black;
+    padding: 9px;
+}
+
+

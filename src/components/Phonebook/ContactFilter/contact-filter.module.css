@@ -1,0 +1,12 @@
+.labelFilter {
+    margin-bottom: 10px;
+}
+
+.filterBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputFilter{
+    margin-bottom: 10px;
+}
