@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
 import ContactItem from '../ContactItem/ContactItem';
 
 import styles from './contact-list.module.css';
 
-const ContactList = ({items, removeBook}) => {
+const ContactList = ({removeContact}) => {
+  const contacts = useSelector(store=> store.contacts)
 
-  const elements = items.map(item => <ContactItem key={item.id} {...item} removeBook={removeBook}/>)
+  const elements = contacts.map(item => <ContactItem key={item.id} {...item} removeContact={removeContact}/>)
 
       return (
         <ol className={styles.contactList}>
@@ -18,6 +20,5 @@ const ContactList = ({items, removeBook}) => {
 export default ContactList;
 
 ContactList.propTypes ={
-  items: PropTypes.array.isRequired,
-  removeBook: PropTypes.func.isRequired
+  removeContact: PropTypes.func.isRequired
 }

@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 
 import styles from './contact-item.module.css';
 
-const ContactItem = ({ id, number, name, removeBook }) => {
+const ContactItem = ({ id, number, name, removeContact }) => {
   return (
     <li className={styles.item}>
       {name}: {number}
       <button
         className={styles.buttonRemove}
-        onClick={() => removeBook(id)}
+        onClick={() => removeContact(id)}
         type="button"
       >
         Delete
@@ -24,7 +24,7 @@ ContactItem.defaultProps = {
 };
 
 ContactItem.propTypes = {
-  removeBook: PropTypes.func.isRequired,
+  removeContact: PropTypes.func,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired

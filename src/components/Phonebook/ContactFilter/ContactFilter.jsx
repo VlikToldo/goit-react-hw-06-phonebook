@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 import styles from './contact-filter.module.css';
 
-const ContactFilter = ({ handleChange }) => {
+const ContactFilter = ({ handleChange, value }) => {
   return (
     <div className={styles.filterBox}>
       <label className={styles.labelFilter}>Find contacts bu name</label>
-      <input className={styles.inputFilter} type="text" name="filter" onChange={handleChange} />
+      <input className={styles.inputFilter} type="text" value={value} name="filter" onChange={handleChange} />
     </div>
   );
 };
