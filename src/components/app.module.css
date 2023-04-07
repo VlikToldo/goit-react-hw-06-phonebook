@@ -2,11 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.listBox{
+  }
+  
+  .listBox{
     border: solid 1px black;
     padding: 9px;
-}
-
-
+  }
